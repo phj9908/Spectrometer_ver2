@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:opencv="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="horizontal"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="#100F0F"
+        android:dividerPadding="@dimen/cardview_compat_inset_shadow"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/sensing_bt"
+            style="@android:style/Widget.Holo.Light.Button"
+            android:layout_width="160dp"
+            android:layout_height="60dp"
+            android:layout_gravity="left"
+            android:text="SENSING"
+            android:textColor="@color/white"
+            android:visibility="visible"
+            opencv:iconPadding="18dp" />
+
+        <Button
+            android:id="@+id/result_bt"
+            style="@android:style/Widget.Holo.Light.Button"
+            android:layout_width="160dp"
+            android:layout_height="60dp"
+            android:layout_gravity="left"
+            android:text="RESULT"
+            android:textColor="@color/white"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/remapping_button"
+            style="@android:style/Widget.Holo.Light.Button"
+            android:layout_width="160dp"
+            android:layout_height="60dp"
+            android:layout_gravity="left"
+            android:text="RE_MAPPING"
+            android:textColor="@color/white"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+    <org.opencv.android.JavaCamera2View
+        android:id="@+id/activity_surface_view2"
+        android:layout_width="700dp"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        opencv:camera_id="any" />
+
+
+</LinearLayout>
